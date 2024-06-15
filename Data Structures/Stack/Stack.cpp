@@ -96,29 +96,26 @@ public:
 
 	// Function to print all the
 	// elements of the stack
-	void display()
-	{
-		Node* temp;
+	void display(){
 
-		// Check for stack underflow
-		if (top == NULL) {
-			cout << "\nStack Underflow";
-			exit(1);
-		}
-		else {
-			temp = top;
-			while (temp != NULL) {
+Node* temp;
+if (top == NULL){
+    cout<<"Stack Underflow"<<endl;
+}
+else{
+    temp = top;
+    while(temp != NULL){
+        
+        cout<<"| "<<temp->data<< " |"<<endl;
+        temp = temp->link;
+        
+    }
+    cout<<"-----";
+}
 
-				// Print node data
-				cout << temp->data;
+}
 
-				// Assign temp link to temp
-				temp = temp->link;
-				if (temp != NULL)
-					cout << " -> ";
-			}
-		}
-	}
+
 };
 
 // Driven Program
